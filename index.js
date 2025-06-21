@@ -29,6 +29,11 @@ app.post('/login', (req, res) => {
     }
 });
 
+app.post('/data', (req, res) => {
+    console.log('received body', req.body);
+    res.send('data received');
+});
+
 
 app.listen(PORT, () => {
     console.log((`server is live at ${PORT}`));
